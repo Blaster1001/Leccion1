@@ -1,0 +1,24 @@
+<h1>R U T A S<small> - Rutas realizadas por la cooperativa</small></h1>
+<hr>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Todos</button>
+  <button type="button" class="btn btn-secondary">Interior</button>
+  <button type="button" class="btn btn-secondary">Exterior</button>
+</div>
+<div class="col animated fadeIn fast" *ngFor="let heroe of heroes; let i=index">
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{heroe.ciuO}}</h5>
+          <p class="card-text">{{heroe.ciuD}}</p>
+          <p class="card-text"><small class="text-muted">{{heroe.precioR}} {{heroe.tipo}}</small></p>
+          <button (click)="verHeroe(i)" type="button" class="btn btn-outline-secondary">Leer más</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
